@@ -6,7 +6,6 @@ def client_data():
     name = input("Enter a username: ").strip()
     url = f"{base_url}{name}"
     try:
-        headers = {"Accept": "application/vnd.github.v3+json"}
         response = requests.get(url)
         print(f"status code = {response.status_code}")
         return response
